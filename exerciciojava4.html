@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    var idade = parseInt(window.prompt("Qual é a sua idade?"));
+
+    while (idade !== parseInt(idade)){
+      var idade = parseInt(window.prompt("Qual é a sua idade? USE SOMENTE NÚMEROS!"));
+    }
+          if ((idade >= 18) && (idade <= 65)) {
+            document.write ("<h1>" + "Parabéns!" + "</h1>"  + " Você já tem " + idade + " anos, você pode tirar CNH!");
+          } else if (idade >= 65) {
+              document.write ("Você não pode mais tirar a CNH com " + idade +" anos."+ "<h1>"  +"Aguarde a próxima vida!" + "</h1>");
+          } else {
+            document.write ("<h1>" + "Como você é jovem!" + "</h1>"  + " Você ainda não pode tirar CNH com " + idade +" anos! Paciência!");
+          }
+    </script>
+
+</body>
+</html>
