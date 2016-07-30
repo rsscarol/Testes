@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adivinhe o número</title>
+  </head>
+  <body>
+    <script>
+
+      var numeroComputador = Math.round(Math.random()*100);
+
+      var numeroUsuario = parseInt(window.prompt("Qual número estou pensando entre 0 e 100?"));
+
+      while (numeroUsuario !== parseInt(numeroUsuario)){
+        var numeroUsuario = parseInt(window.prompt("Qual NÚMERO aleatório estou pensando entre 0 e 100? USE SOMENTE NÚMEROS, por favor!"));
+      }
+
+          if (numeroComputador === numeroUsuario) {
+            document.write ("<h1>" + "Parabéns!" + "</h1>"  + "Você é um gênio. Eu pensei exatamente no número" + " " + numeroComputador);
+          } else if (((numeroComputador-numeroUsuario)* -1) <= 10) {
+            document.write ("Você estava chegando, errou por mais ou menos 10");
+          } else if (((numeroComputador-numeroUsuario)* -1) <= 5) {
+              document.write ("Você quase acertou, errou por mais ou menos 5");
+          } else if (((numeroComputador-numeroUsuario)* -1) == 1) {
+            document.write ("Na trave! Errou por 1");
+          } else {
+            document.write ("Desista! Você errou por mais que 10...")
+          }
+
+
+
+      console.log(numeroComputador);
+
+
+
+
+
+    </script>
+
+  </body>
+</html>
+
+
+
+<!--Utilizando loops, condicionais, operadores lógicos e de comparação, crie um jogo que permita ao usuário adivinhar um número randômico gerado pelo sistema, de 0 a 100. Exiba mensagens dando pistas ao usuário para que este possa concluir, aproximadamente, se está próximo ou não do número secreto. Para gerar um número randômico, utilize o método Math.random(), que retorna um número randômico qualquer entre 0 e 1, multiplique o valor por 100 e aplique o método Math.round(), responsável por arredondar (para integer), pra cima ou pra baixo, um valor decimal. Ex.: Math.round(Math.random() * 100);-->

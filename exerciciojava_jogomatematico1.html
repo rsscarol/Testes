@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adivinhe o número</title>
+  </head>
+  <body>
+    <h1>Adivinhe o número! </h1>
+    <button onclick="jogo()">Vamos jogar!!!</button>
+
+<script>
+
+
+    function jogo(){
+        numeroComputador = Math.round(Math.random()*100);
+        document.write (numeroComputador);
+        var numeroUsuario = parseInt(window.prompt("Qual número estou pensando entre 0 e 100?"));
+            do {
+                numeroUsuario = prompt("Tente mais uma vez...");
+                if ((numeroComputador < numeroUsuario) && (numeroUsuario-numeroComputador)<=5))) {
+                    prompt("Você está bem próximo, volte um pouquinho!");
+                } else if ((numeroComputador < numeroUsuario)) && (numeroUsuario-numeroComputador)>5))) {
+                    prompt("Você foi muito além!");
+                } else if ((numeroComputador > numeroUsuario) && (numeroComputador-numeroUsuario)<=5))) {
+                    prompt("Você está bem próximo, ande mais uns números!");
+                } else if ((numeroComputador > numeroUsuario) && (numeroComputador-numeroUsuario)>5))) {
+                    prompt("Você chutou muito baixo! Arrisque-se mais além");
+                } else document.write("<h1>" + "Parabéns!" + "</h1>"  + "Você é um gênio. Eu pensei exatamente no número" + " " + numeroComputador);
+            } while (numeroComputador !== numeroUsuario);
+    }
+
+    console.log(numeroComputador);
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

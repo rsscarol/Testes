@@ -6,15 +6,25 @@
   </head>
   <body>
     <script>
-    if (idade >= 18) {
-      document.write ("Parabéns! Você já tem " + idade + " anos, você pode tirar CNH!");
-    } else if (idade <= 65) {
-      document.write ("Com" + idade + " anos, você já não pode mais tirar CNH, sinto muito!");
-    } else
-      document.write ("Você só tem" + idade +" anos, aguarde mais um pouco e poderá tirar a CNH!";
-    {
+    function somar (x, y){
+      return x + y;
+    }
+
+    somar (3, 5);
+    somar (1,2);
+    somar(10,32);
 
     </script>
 
+<p id="resultado"></p>
+<p id="resultado1"></p>
+
+<script>
+
+alert(somar(3,5));
+document.getElementById ('resultado').innerHTML = somar (1,2);
+document.getElementById ('resultado1').innerHTML = somar (10,32);
+
+</script>
 
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adivinhe o número</title>
+  </head>
+  <body>
+    <script>
+    var numeroUsuario = prompt ("Qual número estou pensando entre 0 e 100?")
+
+    var numeroComputador = Math.random();
+
+    if (numeroComputador < 0.34) {
+    	numeroComputador = "pedra";
+    } else if(numeroComputador <= 0.67) {
+    	numeroComputador = "papel";
+    } else {
+    	numeroComputador = "tesoura";
+    } console.log("Computer: " + numeroComputador);
+
+
+    var compare = function(choice1 ,choice2) {
+        if(choice1 === choice2) {
+            return "O resultado é um empate";
+        }
+    };
+
+
+
+
+    var userChoice = prompt("Voce escolhe pedra, papel ou tesoura?");
+    var computerChoice = Math.random();
+    if (computerChoice < 0.34) {
+    	computerChoice = "pedra";
+    } else if(computerChoice <= 0.67) {
+    	computerChoice = "papel";
+    } else {
+    	computerChoice = "tesoura";
+    }
+
+    var compare = function (computerChoice, userChoice) {
+        if (computerChoice===userChoice) {
+            console.log("O resultado é um empate!");
+        }
+        else if (computerChoice==="pedra") {
+           if (userChoice === "tesoura") {
+                console.log( "EU VENCI! Pedra destrói tesoura!");
+           } else {
+               console.log( "Você venceu... Papel vence de pedra");
+               }
+        }
+        else if (computerChoice==="papel") {
+            if (userChoice === "pedra") {
+                console.log( "EU VENCI! Papel vence de pedra!");
+           } else {
+               console.log( "Você venceu... Tesoura vence de papel");
+           }
+        }
+        else {
+          if (userChoice === "papel") {
+            console.log( " EU VENCI! Tesoura vence de papel!");
+          }
+          else {
+            console.log( "Você venceu. Pedra perde de papel...");
+          }
+        }
+      }
+
+
+
+
+
+
+
+
+    </script>
+
+  </body>
+</html>
+
+
+
+<!--Utilizando loops, condicionais, operadores lógicos e de comparação, crie um jogo que permita ao usuário adivinhar um número randômico gerado pelo sistema, de 0 a 100. Exiba mensagens dando pistas ao usuário para que este possa concluir, aproximadamente, se está próximo ou não do número secreto. Para gerar um número randômico, utilize o método Math.random(), que retorna um número randômico qualquer entre 0 e 1, multiplique o valor por 100 e aplique o método Math.round(), responsável por arredondar (para integer), pra cima ou pra baixo, um valor decimal. Ex.: Math.round(Math.random() * 100);-->
